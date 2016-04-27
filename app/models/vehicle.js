@@ -3,5 +3,6 @@ import attr from 'ember-data/attr';
 
 export default Model.extend({
   mark: attr('string'),
-  places: attr('number')
+  place: attr('string'),
+  timestamp: attr('number')
 });

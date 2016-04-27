@@ -1,4 +1,12 @@
+<h2>List of cars</h2>
+
+<div>
+    <ul>
+        {{#each model as |vehicle|}}
+        <li>
+            Brand: {{vehicle.mark}}, location: {{vehicle.place}}
+        </li>
+        {{/each}}
+    </ul>
+</div>
 {{outlet}}
-Tu bedzie lista
-<h1>Title</h1>
-{{zmienne}}

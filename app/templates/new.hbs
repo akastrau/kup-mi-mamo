@@ -1,6 +1,26 @@
-<form>
-    <input type="text" name="addVechicle">
-    <input type="submit" name="Submit">
-</form>
+<h2>New vehicle</h2>
+
+<div id="form">
+        <form {{action "publishVehicle" on="submit"}}>
+                {{input value=mark placeholder="Brand"}}    
+                {{input value=place placeholder="Place"}}
+                <button type="submit">Publish</button>
+                
+                {{#if noErrors}}
+                <div>
+                        <br><br>
+                        <b>Car has been successfully added to database!</b>
+               </div>
+               {{else}}
+               <div>
+                        <br><br>
+                        <font color="red"><b>Invalid input!</b></font>
+               </div>
+                {{/if}}
+        </form>
+</div>
+
+
+       
 
 {{outlet}}
