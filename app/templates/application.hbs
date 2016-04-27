@@ -1,7 +1,39 @@
-<h2 id="title">Ember Web App</h2>
+<!--<h2 id="title">Ember Web App</h2>
 <div>
     <h2>Menu</h2>
      {{#link-to "application"}}Home page{{/link-to}} {{#link-to "new"}}New vehicle{{/link-to}}  {{#link-to "list"}} Show vehicles{{/link-to}}
     <br>
 </div>
-{{outlet}}
+//{{outlet}}-->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+      data-toggle="collapse" data-target="#menu-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      {{ link-to 'Home' 'application' class="navbar-brand" }}
+    </div>
+
+    <div class="collapse navbar-collapse" id="menu-collapse">
+      <ul class="nav navbar-nav">
+        <li>{{ link-to 'New vehicle' 'new' }}</li>
+        <li>{{ link-to 'Show vehicles' 'list' }}</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Ember Application</h1>
+        <p>Lorem ipsum dolor.</p>
+        </div>
+</div>
+  <div>
+  {{outlet}}
+</div>

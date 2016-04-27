@@ -1,22 +1,30 @@
-<h2>New vehicle</h2>
+<h1>New vehicle</h1>
 
 <div id="form">
         <form {{action "publishVehicle" on="submit"}}>
-                {{input value=mark placeholder="Brand"}}    
-                {{input value=place placeholder="Place"}}
-                <button type="submit">Publish</button>
+                <div class="form-group">
+                        <label for="inputBrand">Brand name:</label>
+                        {{input value=mark placeholder="Enter a brand name here" class="form-control"}}
+                </div>
+                <div class="form-group">
+                        <label for="inputPlace">Place:</label>
+                        {{input value=place placeholder="Place" class="form-control"}}
+                </div>
                 
-                {{#if noErrors}}
-                <div>
-                        <br><br>
-                        <b>Car has been successfully added to database!</b>
-               </div>
-               {{else}}
-               <div>
-                        <br><br>
-                        <font color="red"><b>Invalid input!</b></font>
-               </div>
-                {{/if}}
+                        <button type="submit" class="btn btn-default">Publish</button>
+                
+                        {{#if noErrors}}
+                        <div>
+                                <br><br>
+                                <b>Car has been successfully added to database!</b>
+                        </div>
+                        {{else}}
+                        <div>
+                                <br><br>
+                                <font color="red"><b>Invalid input!</b></font>
+                        </div>
+                        
+                        {{/if}}
         </form>
 </div>
 

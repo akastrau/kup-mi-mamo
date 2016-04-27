@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
             timestamp: new Date().getTime()
         });
         
-        if (this.get('place') === "" || this.get('mark') === "" || this.get('place') == undefined || this.get('mark') == undefined)
+        if (this.get('place') === "" || this.get('mark') === "" || this.get('place') === undefined || this.get('mark') === undefined)
         {
              this.set("noErrors", false);
         }
