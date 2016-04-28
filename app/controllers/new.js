@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     sortProperties: ['timestamp'],
     sortAscending: true, // sorts vehicles by timestamp
-    noErrors: false,
+    noErrors: null,
+    noFilledForm: null,
     actions: {
         publishVehicle : function() {
         var newVehicle = this.store.createRecord('vehicle', 
@@ -13,9 +14,9 @@ export default Ember.Controller.extend({
             timestamp: new Date().getTime()
         });
         
-        if (this.get('place') === "" || this.get('mark') === "" || this.get('place') === undefined || this.get('mark') === undefined)
+        if (this.get('place') == "" || this.get('mark') == "" || this.get('place') == undefined || this.get('mark') == undefined)
         {
-             this.set("noErrors", false);
+             this.set("noFilledForm", true);
         }
         else 
         {
