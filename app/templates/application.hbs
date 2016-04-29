@@ -1,12 +1,20 @@
-<!--<h2 id="title">Ember Web App</h2>
-<div>
-    <h2>Menu</h2>
-     {{#link-to "application"}}Home page{{/link-to}} {{#link-to "new"}}New vehicle{{/link-to}}  {{#link-to "list"}} Show vehicles{{/link-to}}
-    <br>
-</div>
-//{{outlet}}-->
 
-<nav class="navbar navbar-default">
+<style>
+  .glyphicon-plus {
+     color: #00CC00;
+  }
+  .glyphicon-list-alt {
+    color: #000;
+  }
+  .glyphicon-pushpin {
+    color: #000;
+  }
+  .glyphicon-wrench {
+    color: #000;
+  }
+  </style>
+
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed"
@@ -16,13 +24,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      {{ link-to 'Home' 'application' class="navbar-brand" }}
+      {{#link-to 'application' class="navbar-brand" }}
+      <a href="#"><span class="glyphicon glyphicon-home"></span>Home</a>
+      {{/link-to}}
     </div>
 
     <div class="collapse navbar-collapse" id="menu-collapse">
       <ul class="nav navbar-nav">
-        <li>{{ link-to 'New vehicle' 'new' }}</li>
-        <li>{{ link-to 'Show vehicles' 'list' }}</li>
+        {{#link-to 'new' tagName='li'}}<a href="#"><span class="glyphicon glyphicon-plus"></span>Add vehicle</a>{{/link-to}}
+        {{#link-to 'list' tagName='li'}}<a href="#"><span class="glyphicon glyphicon-list-alt"></span>Show vehicles</a>{{/link-to}}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#link-to 'changelog' tagName='li'}}<a href="#"><span class="glyphicon glyphicon-pushpin"></span>Changelog</a>{{/link-to}}
+        {{#link-to 'about' tagName='li'}}<a href="#"><span class="glyphicon glyphicon-wrench"></span>About</a>{{/link-to}}
       </ul>
     </div>
   </div>
@@ -37,7 +51,7 @@
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
         </button>
-        <strong>Last core update:</strong> czwartek, 28 kwietnia 2016 23:31:37
+        <strong>Last core update:</strong> piątek, 29 kwietnia 2016 23:34:27. See <strong>{{link-to "what's changed" 'changelog'}}</strong>. :)
 </div>
   </div>
   <div>

@@ -5,34 +5,6 @@ export default Ember.Controller.extend({
     sortAscending: true, // sorts vehicles by timestamp
     noErrors: null,
     noFilledForm: null,
-    // actions: {
-    //     publishVehicle : function() {
-    //     var inputPlace = this.get('mark');
-    //     var inputMark = this.get('place');
-    //     var newVehicle = this.store.createRecord('vehicle', 
-    //     {
-    //         mark: inputMark,
-    //         place: inputPlace,
-    //         timestamp: new Date().getTime()
-    //     });
-        
-       
-    //     if (inputMark.trim() === "" || inputPlace.trim() === ""  || inputPlace === undefined || inputMark === undefined)
-    //     {
-    //          this.set("noFilledForm", true);
-             
-    //     }
-    //     else 
-    //     {
-    //         newVehicle.save();
-    //         this.set("place", '');
-    //         this.set("mark", '');
-    //         this.set("noErrors", true);
-            
-    //     }
-        
-    //     }
-    // },
   addVehicle: function() {
     if (this.formIsValid()) {
       var vehicle = this.createControllerFromInputs();
@@ -69,5 +41,4 @@ export default Ember.Controller.extend({
     this.set('noErrors', null);
     this.set('noFilledForm', null);
   }
-    // }
     });
