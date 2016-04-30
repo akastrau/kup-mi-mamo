@@ -5,6 +5,11 @@ export default Ember.Controller.extend({
     sortAscending: true, // sorts vehicles by timestamp
     noErrors: null,
     noFilledForm: null,
+    actions:
+    {
+    validatePlace: function() {
+      console.log("It works! Put some logic here :)");
+    }},
   addVehicle: function() {
     if (this.formIsValid()) {
       var vehicle = this.createControllerFromInputs();
