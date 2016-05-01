@@ -8,7 +8,12 @@ export default Ember.Controller.extend({
     actions:
     {
     validatePlace: function() {
-      console.log("It works! Put some logic here :)");
+      //
+      // console.log("It works! Put some logic here :)");
+      // Ember.$("#vPlace").addClass("has-error has-feedback");
+      // Ember.$("#vState").append('<span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>');
+      // Ember.$("#vState").append('<span class="help-block">Place is incorrect!</span>');
+      
     }},
   addVehicle: function() {
     if (this.formIsValid()) {
