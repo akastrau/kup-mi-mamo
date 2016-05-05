@@ -8,9 +8,12 @@ export default Ember.Route.extend({
     //        // this.controller.set('place').clear();
     //       }
     // },
-    model : function() 
-    {
-       
+    model : function() {
+       return this.get('store').createRecord('vehicle');
+    },
+
+    deactivate : function() {
+        this.get('currentModel').destroyRecord();
     }
     
 });
