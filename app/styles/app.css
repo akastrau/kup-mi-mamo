@@ -2,3 +2,44 @@
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)!important;
 }
+.container .jumbotron {
+  background: url(images/indexjumBG.jpg);
+  background-position: center -300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: -40px;
+  border-radius: 0;
+  min-height: 400px;
+  font-family: 'Raleway', sans-serif;
+}
+.container .jumbotron h1 {
+  font-size: 72px;
+  font-weight: 200;
+  color: rgb(255, 225, 206);
+}
+.container .jumbotron p {
+  color: white;
+  max-width: 400px;
+}
+.container .jumbotron .btn {
+      font-size: 28px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  .glyphicon-plus {
+     color: #00CC00;
+  }
+  .glyphicon-list-alt {
+    color: #000;
+  }
+  .glyphicon-pushpin {
+    color: #000;
+  }
+  .glyphicon-wrench {
+    color: #000;
+  }
+body {
+  padding-top: 70px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
