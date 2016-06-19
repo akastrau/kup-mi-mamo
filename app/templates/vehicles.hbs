@@ -1,0 +1,8 @@
+{{input value=search}}<span>Search</span>
+<ul>
+{{#each model as |vehicles|}}
+<li>{{vehicles.mark}}</li>
+{{/each}}
+</ul>
+
+{{outlet}}
