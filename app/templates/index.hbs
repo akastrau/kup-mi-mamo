@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 style=>
+      Kup Mi Mamo
+    </h1>
+    <p>Nasz serwis gromadzi oferty sprzedaży akcesoriów przydatnych każdemu rodzicowi.</p>
+    <p>
+      Zabawki, ubranka, chodziki, wózki. Kupisz i sprzedasz tu wszystko, co pomoże zapewnić poprawny rozwój swojej pociechy.<br>
+      Nie zwlekaj, ogłoś się już dziś!
+    </p>
+    <div class="row-fluid">
+    {{#link-to 'new'}}
+    <button type="button" class="btn btn-success col-md-3">Utwórz ofertę!</button>
+    {{/link-to}}
+    {{#link-to 'list'}}
+    <button type="button" class="btn btn-primary col-md-3 col-md-offset-6">Przejrzyj oferty!</button>
+    {{/link-to}}
+  </div>
+  </div>
+</div>
+{{outlet}}
