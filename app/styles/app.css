@@ -1,3 +1,14 @@
+@import 'ui-variables';
+
+body {
+  padding-top: 70px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list-group {
+  padding-left: auto;
+}
 .navbar {
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)!important;
@@ -25,21 +36,35 @@
       font-size: 28px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-  .glyphicon-plus {
-     color: #00CC00;
-  }
-  .glyphicon-list-alt {
-    color: #000;
-  }
-  .glyphicon-pushpin {
-    color: #000;
-  }
-  .glyphicon-wrench {
-    color: #000;
-  }
-body {
-  padding-top: 70px;
-  max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
+.glyphicon-plus {
+  color: #00CC00;
+}
+.glyphicon-list-alt {
+  color: #000;
+}
+.glyphicon-pushpin {
+  color: #000;
+}
+.glyphicon-wrench {
+  color: #000;
+}
+.sresults {
+  margin-top: -40px;
+}
+.sresults .filters {
+  margin-top: 70px;
+}
+.sresults .itemlist {
+    margin-top: 40px;
+}
+.shopitem {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 3px;
+  line-height: 30px;
+}
+.shopitem .itemimg {
+  max-height: inherit;
+  height: auto;
 }

@@ -15,5 +15,5 @@ export default Ember.Route.extend({
     deactivate : function() {
         this.get('currentModel').destroyRecord();
     }
-    
+
 });
