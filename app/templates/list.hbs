@@ -1,14 +1,25 @@
-<div class="page-header col-sm-offset-1">
-    <h1>List of cars</h1>      
+<div class="container-fluid sresults">
+  <div class="col-md-3 filters">
+    <p>Filters, someday</p>
   </div>
-
-<div>
-    <ul class="list-group col-sm-offset-1">
-        {{#each model as |vehicle|}}
-        <li class="list-group-item">
-            Brand: {{vehicle.mark}}, location: {{vehicle.place}}
-        </li>
-        {{/each}}
-    </ul>
+  <div class="col-md-9 itemlist">
+    {{#each model as |vehicle|}}
+    <div class="row shopitem">
+      <div class="col-md-3 itemimg">
+        <img src="http://ecx.images-amazon.com/images/I/51vUxptAwOL._SL500_SS135_.jpg" style="position:center; overlay:none"/>
+      </div>
+      <div class="col-md-9 itemdesc">
+        <h4>{{vehicle.mark}}</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Donec mi justo, vehicula ac sagittis tincidunt, suscipit vitae lectus.
+          Ut maximus mi sed velit imperdiet viverra.
+          Quisque pretium tortor quis quam sagittis, ac consectetur est luctus.
+        </p>
+        <h5 style="float:right">{{vehicle.place}}</h5>
+      </div>
+    </div>
+    {{/each}}
+  </div>
 </div>
 {{outlet}}
